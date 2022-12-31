@@ -1,5 +1,5 @@
 const express= require('express');
-const product= require('./api/product')
+const product= require('../api/product')
 const app= express();
 app.get('/', (req, res) => res.send('your api is ok! fine man') )
 
