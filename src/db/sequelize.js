@@ -1,3 +1,4 @@
+
 const {Sequelize, DataTypes} = require("sequelize");
 const PersonModel= require('../model/persone');
 
@@ -12,6 +13,14 @@ const sequelize= new Sequelize(process.env.DB_NAME || 'testy',process.env.DB_USE
     // },
     // logging: false
 })
+
+// export const pool= createPool({
+//     user: 'root',
+//     password: 'root',
+//     host: 'localhost',
+//     port: 3306,
+//     database: 'testy'
+// })
 
 const person= PersonModel(sequelize, DataTypes)
 
