@@ -4,8 +4,8 @@ const PersonModel= require('../model/persone');
 
 
 const sequelize= new Sequelize('testy', 'root', 'root',{
-    host:'localhost',
-    port: 3306,
+    host:process.env.DB_HOST || 'localhost',
+    port:process.env.PORT || 3306,
     dialect: 'mysql',
     dialectOptions:{
         timezone: 'Etc/GMT-2'
