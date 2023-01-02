@@ -7,10 +7,10 @@ const sequelize= new Sequelize(process.env.DB_NAME || 'testy',process.env.DB_USE
     host:process.env.DB_HOST || 'localhost',
     port:process.env.PORT || 3306,
     dialect: 'mysql',
-    dialectOptions:{
-        timezone: 'Etc/GMT-2'
-    },
-    logging: false
+    // dialectOptions:{
+    //     timezone: 'Etc/GMT-2'
+    // },
+    // logging: false
 })
 
 const person= PersonModel(sequelize, DataTypes)
